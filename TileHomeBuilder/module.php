@@ -18,10 +18,10 @@ class TileHomeBuilder extends IPSModule
     {
         parent::ApplyChanges();
         if (!$this->isWithinTileHome($this->InstanceID)) {
-            $this->setStatus('Bitte diese Generator-Instanz innerhalb Tile Home (52221) ablegen.');
+            $this->updateStatusMessage('Bitte diese Generator-Instanz innerhalb Tile Home (52221) ablegen.');
             return;
         }
-        $this->setStatus('Bereit. Die Generierung verändert ausschließlich Objekte innerhalb Tile Home (52221).');
+        $this->updateStatusMessage('Bereit. Die Generierung verändert ausschließlich Objekte innerhalb Tile Home (52221).');
     }
 
     public function Generate(): void
@@ -29,9 +29,9 @@ class TileHomeBuilder extends IPSModule
         try {
             $result = $this->generateTiles();
             $message = $result['rooms'] . ' Räume mit ' . $result['items'] . ' Statusvariablen aktualisiert.';
-            $this->setStatus($message);
+            $this->updateStatusMessage($message);
         } catch (Throwable $error) {
-            $this->setStatus('Fehler: ' . $error->getMessage());
+            $this->updateStatusMessage('Fehler: ' . $error->getMessage());
             $this->SendDebug(__FUNCTION__, $error->getMessage(), 0);
         }
     }
@@ -251,7 +251,7 @@ class TileHomeBuilder extends IPSModule
         return false;
     }
 
-    private function setStatus(string $status): void
+    private function updateStatusMessage(string $status): void
     {
         $this->WriteAttributeString('Status', $status);
         $this->UpdateFormField('Status', 'caption', $status);
