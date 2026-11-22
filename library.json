@@ -1,0 +1,13 @@
+{
+  "id": "{3A10B54F-FAE1-4420-B14A-1E4A2A31E509}",
+  "name": "IPSTileHomeBuilder",
+  "author": "Andreas Walder",
+  "url": "https://github.com/AndreasWalder/Automatische-Visualisierung",
+  "version": "1.0",
+  "build": 1,
+  "date": 20261122,
+  "compatibility": {
+    "version": "8.2"
+  }
+}
+
