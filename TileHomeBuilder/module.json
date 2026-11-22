@@ -1,0 +1,15 @@
+{
+  "id": "{CA05F9B1-FE1E-48FF-B217-E9484762AB00}",
+  "name": "TileHomeBuilder",
+  "type": 4,
+  "vendor": "Haussteuerung",
+  "aliases": [
+    "Tile Home Visualisierung automatisch erstellen"
+  ],
+  "parentRequirements": [],
+  "childRequirements": [],
+  "implemented": [],
+  "prefix": "THB",
+  "url": "https://github.com/AndreasWalder/Automatische-Visualisierung"
+}
+
