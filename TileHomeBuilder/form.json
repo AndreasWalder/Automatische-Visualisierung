@@ -1,0 +1,27 @@
+{
+  "elements": [
+    {
+      "type": "Label",
+      "caption": "Erstellt eine Multi-Raumübersicht und je Raum eine Statusseite. Es werden alle Variablen unterhalb der gewählten Raumwurzel ausschließlich lesend angezeigt. Ziel ist fest auf Visualization (42569) → Tile Home (52221) begrenzt."
+    },
+    {
+      "type": "SelectCategory",
+      "name": "RoomRootID",
+      "caption": "Kategorie, deren direkte Unterkategorien die Räume enthalten",
+      "value": 0
+    },
+    {
+      "type": "Button",
+      "caption": "Raumvisualisierung erstellen / aktualisieren",
+      "confirm": "Nur Raumübersicht und Raumdetailseiten innerhalb Visualization (42569) → Tile Home (52221) erstellen oder aktualisieren?",
+      "onClick": "THB_Generate($id);"
+    },
+    {
+      "type": "Label",
+      "name": "Status",
+      "caption": "Bitte die Raumwurzel auswählen und die Erstellung starten."
+    }
+  ],
+  "actions": []
+}
+
